@@ -1,0 +1,22 @@
+<!-- converter/templates/converter/converter.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        li {
+            display: inline;
+            padding: 10px;
+          }
+    </style>
+</head>
+<body>
+    <h1>Unit Converter</h1>
+    <ul>
+        <li><a href="{% url 'convert_length' %}">Length</a></li>
+        <li><a href="{% url 'convert_weight' %}">Weight</a></li>
+        <li><a href="{% url 'convert_temp' %}">Temperature</a></li>
+    </ul>
+</body>
+</html>

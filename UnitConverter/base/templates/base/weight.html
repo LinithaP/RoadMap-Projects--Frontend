@@ -1,0 +1,36 @@
+<!-- converter/templates/converter/converter.html -->
+{% extends 'base/navbar.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <style>
+        .container {
+            border: 10px;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Unit Converter</h1>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Convert</button>
+        </form>
+    </div>
+    
+    {% if result is not None %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+
+</body>
+</html>
+{% endblock content %}
