@@ -1,4 +1,4 @@
-List of Forntend Projects:
+List of Frontend Projects:
 
 1. [Unit Converter](https://roadmap.sh/projects/unit-converter)
 2. [Cookie Consent](https://roadmap.sh/projects/cookie-consent)
