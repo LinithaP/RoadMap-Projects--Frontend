@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .container {
+            width: 20px;
+            padding: 10px;
+            
+        } */
+
+        #textbox {
+           
+            width: 500px;       /* Set the desired width */
+            height: 300px;      /* Set the height to 300px */
+            padding: 10px;       /* Optional: adjust padding as needed */
+            box-sizing: border-box; /* Include padding in the width and height */
+            border: 1px solid #ccc; /* Border style */
+            outline: none;      /* Remove outline on focus */
+            font-size: 16px;
+            resize: none;
+            border-radius: 25px;
+            
+        }
+        .btn {
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+
+        }
+        .btn:disabled {
+    background-color: #d3d3d3; /* Light gray */
+    color: #a9a9a9; /* Darker gray for text */
+    cursor: not-allowed; /* Change cursor to indicate it's disabled */
+}
+    </style>
+</head>
+<body>
+    <form action="#" method="POST">
+        <h1>Write Your Message</h1>
+        <p><br><textarea  id="textbox" maxlength="250" class="form-control" rows="3" cols="60" onFocus="countChars('textbox','char_count',250, 'btnID')" onKeyDown="countChars('textbox','char_count',250, 'btnID')" onKeyUp="countChars('textbox','char_count',250, 'btnID')"></textarea>
+            <div id="char_count"></div></p>
+        <p><input type="submit" class="btn" value="Submit" id="btnID" /></p>
+        </form>
+    
+
+    <script>
+        // function countLimit(textbox, counter){
+        //     var count = document.getElementById(textbox).value.length;
+        //     if (count > 250) {
+        //         document.getElementById(textbox).innerHTML = "<span style=\"color: red;\">" + count + "</span>"; 
+        //     } else { document.getElementById(counter).innerHTML = count; }
+        // }
+        function countChars(textbox, counter, max, btnID) {
+      var count =  document.getElementById(textbox).value.length;
+      var btn = document.getElementById(btnID);
+      if (count > max-1) { 
+        document.getElementById(counter).innerHTML = "<span style=\"color: red;\">" + count +'/'+ max + "</span>";
+        document.getElementById(textbox).style.border = '1px solid red';
+        document.getElementById(textbox).style.color = "red"; 
+        btn.disabled = true;
+        }
+      else { document.getElementById(counter).innerHTML = count + '/' + max;
+      document.getElementById(textbox).style.border = "";
+        
+        document.getElementById(textbox).style.color = ""; 
+        btn.disabled = false;
+       }
+    }
+    </script>
+</body>
+</html>
