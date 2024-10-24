@@ -5,3 +5,4 @@ List of Frontend Projects:
 3. [Restricted Textarea](https://roadmap.sh/projects/restricted-textarea)
 4. [Accordion](https://roadmap.sh/projects/accordion)
 5. [Tabs](https://roadmap.sh/projects/simple-tabs)
+6. [Custom Dropdown](https://roadmap.sh/projects/custom-dropdown)
