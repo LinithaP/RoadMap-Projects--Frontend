@@ -7,3 +7,4 @@ List of Frontend Projects:
 5. [Tabs](https://roadmap.sh/projects/simple-tabs)
 6. [Custom Dropdown](https://roadmap.sh/projects/custom-dropdown)
 7. [Task Tracker](https://roadmap.sh/projects/task-tracker-js)
+8. [Temperature Converter](https://roadmap.sh/projects/temperature-converter)
